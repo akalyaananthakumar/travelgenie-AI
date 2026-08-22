@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TravelGenie AI</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">🤖 TravelGenie AI</div>
+    <div class="tag">Plan trips, discover activities and build practical itineraries.</div>
+    <button class="new-chat" id="newChat">＋ New Chat</button>
+    <div class="sidebar-info">Powered by Gemini<br>Educational AI assistant</div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="title">TravelGenie AI</div><div class="status">● Online</div>
+    </header>
+    <section class="chat" id="chat">
+      <div class="welcome">
+        <h1>How can I help?</h1>
+        <p>Ask a question and get a focused AI response.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-text="Plan a 3-day trip to Chennai">Plan a 3-day trip to Chennai</button>
+          <button class="suggestion" data-text="What should I pack for a hill trip?">What should I pack for a hill trip?</button>
+          <button class="suggestion" data-text="Suggest a weekend itinerary">Suggest a weekend itinerary</button>
+          <button class="suggestion" data-text="How do I plan a travel budget?">How do I plan a travel budget?</button>
+        </div>
+      </div>
+    </section>
+    <section class="composer">
+      <form class="form" id="chatForm">
+        <textarea id="message" placeholder="Ask for a trip plan, destination ideas, activities, or packing help..." rows="1"></textarea>
+        <button class="send" id="send" type="submit">Send</button>
+      </form>
+      <div class="note">AI responses can be inaccurate. Verify important information.</div>
+    </section>
+  </main>
+</div>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
